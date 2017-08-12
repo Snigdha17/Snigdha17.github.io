@@ -13,6 +13,11 @@ body {margin:0;padding:0;}
                 0px 18px 23px rgba(0,0,0,0.1);
 }
 
+.row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
 .bgimg{
   /*  min-height: 720px;
     position: relative;
@@ -47,6 +52,7 @@ body {margin:0;padding:0;}
 
 
 
+
 h1{
     font-weight: 700;
     font-size: 5em;
@@ -68,6 +74,11 @@ hr{
 
 }
 
+
+.icon-bar{
+    overflow: auto;
+    display: block;
+}
 .icon-bar ul{
     
     position: relative;
@@ -144,6 +155,9 @@ hr{
 }
 
 
+/*remove standard list and bullet formatting from ul*/
+
+
 
 /*.navbar-default{
     background-color: black;
@@ -170,52 +184,126 @@ hr{
   max-width: 533px;
 }
 
-.hover-opaque {
-    background: #000;
-    opacity: 0;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    transition: all ease .5s;
-  -webkit-transition: all ease .5s;
-  -moz-transition: all ease .5s;
-}
+/*.hover-opaque {*/
+/*    background: #000;*/
+/*    opacity: 0;*/
+/*    position: absolute;*/
+/*    top: 0px;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    transition: all ease .5s;*/
+/*  -webkit-transition: all ease .5s;*/
+/*  -moz-transition: all ease .5s;*/
+/*}*/
 
-.hover-opaque i {
-  position: absolute;
-  text-align: center;
-  color: red;
-  top: 50%;
-  right: 50%;
-  margin: -12px;
-  border: 1px solid green;
+/*.hover-opaque i {*/
+/*  position: absolute;*/
+/*  text-align: center;*/
+/*  color: red;*/
+/*  top: 50%;*/
+/*  right: 50%;*/
+/*  margin: -12px;*/
+/*  border: 1px solid green;*/
   
-}
+/*}*/
 
-.hoverclass {
+/*.hoverclass {*/
+/*  position: absolute;*/
+/*  color: #fff;*/
+/*  top: 50%;*/
+/*  right: 50%;*/
+/*  font-size: 2em;*/
+/*  margin: -15px;*/
+/*  opacity: 0;*/
+/*  transition: all ease .5s;*/
+/*  -webkit-transition: all ease .5s;*/
+/*  -moz-transition: all ease .5s;*/
+/*}*/
+
+/*.thumbnail:hover .hover-opaque {*/
+/*    opacity: 0.7;*/
+/*}*/
+
+/*.thumbnail:hover .hoverclass {*/
+/*  opacity: 1;*/
+/*}*/
+
+
+
+.overlay {
   position: absolute;
-  color: #fff;
-  top: 50%;
-  right: 50%;
-  font-size: 2em;
-  margin: -15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.hoverclass:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .3);
+}
+
+
+
+.hoverclass .title {
+  position: absolute;
+  width: 400px;
+  left: 0;
+  top: 120px;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  z-index: 1;
+  transition: top .5s ease;
+}
+
+.hoverclass:hover .title {
+  top: 90px;
+}
+
+.hoverclass .button {
+  position: absolute;
+  width: 400px;
+  left:0;
+  top: 180px;
+  text-align: center;
   opacity: 0;
-  transition: all ease .5s;
-  -webkit-transition: all ease .5s;
-  -moz-transition: all ease .5s;
+  transition: opacity .35s ease;
 }
 
-.thumbnail:hover .hover-opaque {
-    opacity: 0.7;
+.hoverclass .button a {
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
 }
 
-.thumbnail:hover .hoverclass {
+.hoverclass:hover .button {
   opacity: 1;
 }
 
 
 
+.intro{
+    background: black;
+    padding: 80px 0;
+}
+
+.intro img{
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+}
+.intro .thumbnail{
+    border-radius: 500px;
+}
 
 
 
@@ -235,19 +323,8 @@ hr{
     width: 977px;
 }
 
-.intro{
-    background: black;
-    padding: 80px 0;
-}
-.intro .container{
-    position: relative;
-    padding: 0;
-    margin: 0 auto;
-    width: 977px;
-}
-.intro-img .img-circle{
-    max-width: 200px;
-}
+
+
 
 
 .media .thumbnail{
@@ -262,6 +339,96 @@ hr{
 .img-rounded{
     max-width: 300px;
     border-radius: 15px;
+}
+
+
+
+.contact {
+  padding: 25px 0 450px 0;
+  background: url(StonyBrook.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.contact i {
+  padding: 0 20px;
+  font-size: 0.8em;
+}
+
+.contact h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5em;
+  border: 1px solid #555;
+  background-color: rgba(0,0,0,0.6);
+  padding-top: 20px;
+  height: 75px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 40px;
+  padding-left: 50px;
+  text-align: center;
+}
+
+#comments {
+  margin-top: 0;
+}
+
+#contactform {
+  height: 215px;
+}
+
+#contactform .right {
+  float: right;
+}
+
+#contactform input,
+#contactform textarea {
+  margin-bottom: 140px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  
+}
+
+#contactform input {
+  padding-left: 15px;
+  height: 44px;
+  border-radius: 0;
+ 
+}
+
+#contactform textarea {
+  padding: 15px;
+  height: 218px;
+  border-radius: 0;
+
+}
+
+#contactform .btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 0;
+  border: 1px solid #333;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  
+}
+
+#contactform .btn:hover {
+  background: rgba(9,8,77,0.7);
+  background-color: rgba(0,0,0,0.6);
+}
+
+#map-canvas {
+  width: 100%;
+  height: 135px;
+  margin-bottom: 15px;
+  border: 2px solid #fff;
 }
 
 
