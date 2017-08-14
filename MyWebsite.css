@@ -455,11 +455,11 @@ hr{
 	padding-right:35px;
 	padding-top:35px;
 	padding-bottom:50px;
-	width: 450px;
+	width: 800px;
 	float: left;
 	left: 50%;
 	position: relative;
-	margin-left: -260px;
+	margin-left: -400px;
 }
 
 .feedback-input {
