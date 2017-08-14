@@ -5,6 +5,11 @@
     font-family: 'Lato';
 }
 
+body{
+     background: url(moulin_@2X.png);
+    background-repeat: repeat;
+   
+}
 .container {
     max-width: 1140px; 
     margin: 0 auto;
@@ -17,8 +22,8 @@ section {
 
 .resume {
     text-align: center;
-    background: url(moulin_@2X.png);
-    background-repeat: repeat;
+    /*background: url(moulin_@2X.png);*/
+    /*background-repeat: repeat;*/
     font-size: 0;
     box-sizing: border-box;
 }
